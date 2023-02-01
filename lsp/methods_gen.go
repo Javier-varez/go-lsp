@@ -242,7 +242,7 @@ func (m *Methods) didOpenTextDocumentMethodInfo() *jsonrpc.MethodInfo {
 		return nil
 	}
 	return &jsonrpc.MethodInfo{
-		Name: "didOpenTextDocument",
+		Name: "textDocument/didOpen",
 		NewRequest: func() interface{} {
 			return &defines.DidOpenTextDocumentParams{}
 		},
@@ -270,7 +270,7 @@ func (m *Methods) didChangeTextDocumentMethodInfo() *jsonrpc.MethodInfo {
 		return nil
 	}
 	return &jsonrpc.MethodInfo{
-		Name: "didChangeTextDocument",
+		Name: "textDocument/didChange",
 		NewRequest: func() interface{} {
 			return &defines.DidChangeTextDocumentParams{}
 		},
@@ -354,7 +354,7 @@ func (m *Methods) didSaveTextDocumentMethodInfo() *jsonrpc.MethodInfo {
 		return nil
 	}
 	return &jsonrpc.MethodInfo{
-		Name: "didSaveTextDocument",
+		Name: "textDocument/didSave",
 		NewRequest: func() interface{} {
 			return &defines.DidSaveTextDocumentParams{}
 		},
